@@ -5,39 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Expenses chart component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<main class="container">
+  <section class="container-balance-header">
+    <div class="balance-header-left">
+      <div class="my-balance-title">My balance</div>
+      <h2 class="my-balance">$921.48</h2>
+    </div>
+    <div class="balance-header-right">
+      <svg width="72" height="48" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#382314" cx="48" cy="24" r="24"/><circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23"/></g></svg>
+    </div>
+  </section>
+  <section class="container-balance-content">
+    <h1 class="spending-title">Spending - Last 7 days</h1>
+    <ul class="spending-chart">
+      <li class="day-spending">
+        <div class="data" value=""></div>
+        <small class="day">mon</small>
+      </li>
+      <li class="day-spending">
+        <div class="data" value=""></div>
+        <small class="day">tue</small>
+      </li>
+      <li class="day-spending">
+        <div class="data" value=""></div>
+        <small class="day">wed</small>
+      </li>
+      <li class="day-spending">
+        <div class="data" value=""></div>
+        <small class="day">thu</small>
+      </li>
+      <li class="day-spending">
+        <div class="data" value=""></div>
+        <small class="day">fri</small>
+      </li>
+      <li class="day-spending">
+        <div class="data" value=""></div>
+        <small class="day">sat</small>
+      </li>
+      <li class="day-spending">
+        <div class="data" value=""></div>
+        <small class="day">sun</small>
+      </li>
+    </ul>
+    <div class="spending-footer">
+      <div class="border-top"></div>
+      <div class="wrapper">
+        <div class="col left">
+          <small>Total this month</small>
+          <h1 class="total-month">$478.33</h1>
+        </div>
+        <div class="col right">
+          <span class="rate">+2.4%</span>
+          <small>from last month</small>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script type="text/javascript" src="data.json"></script>
+<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
