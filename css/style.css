@@ -158,11 +158,29 @@ h1.total-month{
     margin: 0;
 }
 
-.data:hover{
+div.data:hover{
     cursor: pointer;
-    color: aqua;
 }
-.data:active{
-    border: 1px solid black;
+.data-max{
+    background-color: var(--primary-cyan-hover) !important;
+}
 
+.data-normal{
+    background-color: var(--primary-soft-red-hover) !important;
+}
+
+.overlay-div{
+    display:  none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 40px;
+    background-color: black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    /* padding: 8px 9px 9px 8px; */
+    margin-bottom: 8px;
 }

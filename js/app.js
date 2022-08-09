@@ -1,9 +1,9 @@
-
-
+let globalData;
 const getData = async () =>{
     try {
         const res = await fetch('./data.json');
         const data = await res.json();
+        globalData = data;
         return data;        
     } catch (error) {
         console.error(error);
@@ -43,10 +43,30 @@ data.then((res)=>{
     }
 });
 
-const daySpending = document.querySelectorAll('.data');
+// FF9985
 
-for (day of daySpending){
-    day.addEventListener('click', (e) =>{
-        console.log(e);
-    })
-}
+const spendingChart = document.querySelector('.spending-chart');
+
+spendingChart.addEventListener('click', (e) => {
+    if (e.target instanceof HTMLDivElement){
+        if (e.target.classList.contains('max')){   
+            e.target.classList.toggle("data-max");
+        }else
+        {
+            e.target.classList.toggle("data-normal");
+        }
+    const overlayDiv = document.getElementById(e.target.classList[1]);
+    if (overlayDiv.style.display === "none"){
+        let dataDay;
+        for (let day of globalData)
+            if (day.day === e.target.classList[1]){
+                dataDay = day.amount;
+            }
+        const title = `$${dataDay}`;
+        overlayDiv.style.display = "flex";
+        overlayDiv.textContent = title;
+        }
+    else {
+        overlayDiv.style.display = "none";
+    }}
+})
