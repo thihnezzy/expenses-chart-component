@@ -10,17 +10,12 @@ const getData = async () =>{
     }
 }
 
-
-const data = getData();
-
-
 function financial(x) {
     return Number.parseFloat(x).toFixed(5);
   }
 
 // const fullBarPercent = 100;
 const fullBarPixel = 150;
-
 
 const modifyDiv = (maxAmount,day) => {
     const ele = document.querySelector(`.${day['day']}`);
@@ -34,16 +29,13 @@ const modifyDiv = (maxAmount,day) => {
 
 }
 
+const data = getData();
 data.then((res)=>{
-    const maxAmount = Math.max(...(res.map((obj) =>{
-        return obj['amount'];
-    })));
+    const maxAmount = Math.max(...(res.map((obj) => obj['amount'])));
     for (let day of res){
         modifyDiv(maxAmount,day);
     }
 });
-
-// FF9985
 
 const spendingChart = document.querySelector('.spending-chart');
 
