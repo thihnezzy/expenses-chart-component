@@ -19,7 +19,7 @@ const fullBarPixel = 150;
 
 const modifyDiv = (maxAmount,day) => {
     const ele = document.querySelector(`.${day['day']}`);
-    ele.setAttribute('value',day['amount']);
+    // ele.setAttribute('value',day['amount']);
     const height = day['amount'] / maxAmount * fullBarPixel;
     ele.style.height = `${height}px`;
     if (financial(day['amount']) == financial(maxAmount)){
