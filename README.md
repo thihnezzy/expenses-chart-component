@@ -34,13 +34,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./images/screenshot.png)
 
 
 ### Links
 
 - Solution URL: [Github - Expenses Chart](https://github.com/thihnezzy/expenses-chart-component)
-- Live Site URL: [Expenses Chart](https://your-live-site-url.com)
+- Live Site URL: [Expenses Chart](https://expenses-chart-component-sigma.vercel.app/)
 
 ## My process
 
@@ -48,6 +48,7 @@ Users should be able to:
 
 - Pure HTML/CSS
 - Javascript
+- Deploy with Vercel
 ### What I learned
 
 - Using Async/Await function
